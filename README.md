@@ -79,8 +79,3 @@ git push -u origin main
 ```
 
 `.env`, `vendor/`, dan file database SQLite sudah diabaikan oleh `.gitignore`.
-
-## Catatan
-
-- Foto stand dan produk yang belum diunggah memakai gambar bawaan template sebagai pengganti (burger, pizza, donat) sesuai kategori.
-- Belum ada fitur lupa kata sandi dan pengujian otomatis. Itu bisa ditambahkan sebagai pengembangan lanjutan.
