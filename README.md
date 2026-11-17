@@ -34,10 +34,8 @@ Database bawaan memakai SQLite. Untuk MySQL, ubah bagian `DB_*` di `.env`, lalu 
 | Peran | Email |
 |---|---|
 | Admin | admin@cd.test |
-| Pemilik stand | sate@cd.test, kopi@cd.test, cilok@cd.test, waffle@cd.test, nasgor@cd.test, lila@cd.test |
+| Pemilik stand | kpml@cd.test, vanocoffe@cd.test, angkringanvano@cd.test, hatkasuki@cd.test, kentang@cd.test, desava@cd.test, noniku@cd.test, nasibakar@cd.test, outchill@cd.test, tehtarik@cd.test |
 | Pengajuan di daftar tunggu | pending@cd.test (belum bisa masuk sampai diterima admin) |
-
-Ganti kata sandi admin sebelum dipakai sungguhan.
 
 ## Alur sistem
 
@@ -65,17 +63,3 @@ Secara bawaan `MAIL_MAILER=log`, jadi email tidak benar-benar terkirim tetapi te
 | Pemberitahuan | `app/Notifications/` |
 | Tabel | migrasi di `database/migrations/` (`users`, `stands`, `products`, `notifications`) |
 
-## Mengunggah ke GitHub
-
-Buat repository kosong di GitHub (tanpa README), lalu:
-
-```bash
-git init
-git add .
-git commit -m "Project awal CD Jajan"
-git branch -M main
-git remote add origin https://github.com/USERNAME/cd-jajan.git
-git push -u origin main
-```
-
-`.env`, `vendor/`, dan file database SQLite sudah diabaikan oleh `.gitignore`.
