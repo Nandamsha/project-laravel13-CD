@@ -28,6 +28,7 @@ class User extends Authenticatable
         return $this->role === 'admin';
     }
 
+
     public function stand(): HasOne
     {
         return $this->hasOne(Stand::class);

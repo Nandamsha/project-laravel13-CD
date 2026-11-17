@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatalogController;
@@ -17,6 +18,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/daftar', [AuthController::class, 'showRegister'])->name('register');
     Route::post('/daftar', [AuthController::class, 'register'])->middleware('throttle:10,1');
     Route::get('/daftar/terkirim', [AuthController::class, 'done'])->name('register.done');
+        Route::get('/lupa-sandi', [PasswordResetController::class, 'show'])->name('password.request');
+    Route::post('/lupa-sandi', [PasswordResetController::class, 'update'])->middleware('throttle:10,1')->name('password.update');
 });
 
 Route::middleware('auth')->group(function () {
