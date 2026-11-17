@@ -1,0 +1,6 @@
+*
+!.gitignore
+!stands/
+!stands/**
+!products/
+!products/**

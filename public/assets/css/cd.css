@@ -1,0 +1,304 @@
+:root {
+    color-scheme: light
+}
+
+body {
+    padding-bottom: env(safe-area-inset-bottom, 0px)
+}
+
+.mqbar {
+    max-width: 460px;
+    margin: 0 auto 16px
+}
+
+.mqbar input {
+    border-radius: 99px;
+    padding: 12px 20px;
+    border: 2px solid #eee
+}
+
+.mcard {
+    cursor: pointer
+}
+
+.mimg img {
+    object-fit: cover
+}
+
+.gone {
+    display: none
+}
+
+.sfchip {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    background: var(--dark);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 99px;
+    border: 0;
+    font-size: .85rem
+}
+
+.offcanvas {
+    width: min(420px, 100%) !important
+}
+
+.offcanvas-header {
+    padding-top: calc(1rem + env(safe-area-inset-top, 0px))
+}
+
+.cgrp {
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 12px;
+    margin-top: 12px;
+    background: #fff
+}
+
+.cgrp h6 {
+    font-family: Poppins;
+    font-weight: 700
+}
+
+.cgrp pre {
+    white-space: pre-wrap;
+    background: var(--light);
+    border: 1px dashed #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    font: 12.5px/1.5 Poppins, sans-serif;
+    margin: 10px 0
+}
+
+.crow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+    font-size: .9rem
+}
+
+.qb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px
+}
+
+.qb button {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff
+}
+
+.wabtn {
+    width: 100%;
+    border: 0;
+    background: #25a244;
+    color: #fff;
+    font-weight: 600;
+    padding: 11px;
+    border-radius: 12px
+}
+
+.kt {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow)
+}
+
+.kt td,
+.kt th {
+    vertical-align: middle;
+    font-size: .9rem
+}
+
+.kt input[type=number] {
+    width: 100px
+}
+
+.kbox {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    height: 100%
+}
+
+.kst {
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: var(--shadow);
+    text-align: center
+}
+
+.kst b {
+    font: 700 1.9rem 'Playfair Display', serif;
+    display: block;
+    color: var(--primary)
+}
+
+.sb {
+    border: 0;
+    border-radius: 99px;
+    padding: 5px 14px;
+    font-weight: 600;
+    font-size: .8rem;
+    background: var(--secondary);
+    color: #222
+}
+
+.sb.off {
+    background: #e5e5e5;
+    color: #777
+}
+
+.dbtn {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: none;
+    border-radius: 99px;
+    padding: 5px 14px;
+    font-size: .8rem
+}
+
+#toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    transform: translateX(-50%);
+    background: var(--dark);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 99px;
+    z-index: 3000;
+    display: none;
+    font-size: .9rem
+}
+
+.empty {
+    text-align: center;
+    color: #999;
+    padding: 30px 10px;
+    grid-column: 1/-1
+}
+
+section[id] {
+    scroll-margin-top: 78px
+}
+
+.navbar form {
+    display: inline
+}
+
+/* Cegah teks menu dan tombol terpotong menjadi 2 baris */
+.navbar-brand,
+.navbar-nav .nav-link,
+.btn-nav-login,
+.btn-nav-register,
+.nav-cta {
+    white-space: nowrap;
+}
+
+/* Tombol Masuk & Daftar Stand di Header */
+.btn-nav-login,
+.btn-nav-register {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.2;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.btn-nav-login {
+    background: #fff;
+    color: #333;
+    border: 1.5px solid #e0e0e0;
+}
+
+.btn-nav-login:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: rgba(232, 40, 26, 0.06);
+    transform: translateY(-2px);
+}
+
+.btn-nav-register {
+    background: rgba(232, 40, 26, 0.09);
+    color: var(--primary);
+    border: 1.5px solid rgba(232, 40, 26, 0.28);
+}
+
+.btn-nav-register:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 6px 16px rgba(232, 40, 26, 0.28);
+    transform: translateY(-2px);
+}
+
+/* Pastikan aksi header tetap 1 baris di desktop */
+@media (min-width: 992px) {
+    .nav-actions {
+        flex-wrap: nowrap !important;
+    }
+}
+
+/* Rapatkan jarak saat layar dikecilkan (992px - 1199px) agar tidak turun baris */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #nav .bname {
+        font-size: 1.18rem;
+    }
+
+    #nav .bsub {
+        font-size: 0.56rem;
+    }
+
+    #nav .navbar-nav .nav-link {
+        padding: 24px 9px !important;
+        font-size: 0.82rem;
+    }
+
+    #nav .nav-actions {
+        gap: 6px !important;
+    }
+
+    #navSearchBtn {
+        padding: 6px 8px;
+    }
+
+    .btn-nav-login,
+    .btn-nav-register {
+        padding: 8px 11px;
+        font-size: 0.79rem;
+    }
+
+    #nav .nav-cta {
+        padding: 8px 13px !important;
+        font-size: 0.79rem !important;
+        margin-left: 0;
+    }
+}
+
+/* Tampilan menu collapse di layar HP/tablet (< 992px) */
+@media (max-width: 991.98px) {
+    .nav-actions {
+        flex-wrap: wrap;
+        padding: 10px 0 14px;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 6px;
+    }
+}
